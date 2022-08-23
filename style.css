@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+:root {
+
+    --Linear-gradient-active-input-border: hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
+    --Red-input-errors: hsl(0, 100%, 66%);
+
+    --White: hsl(0, 0%, 100%) --Light-grayish-violet: hsl(270, 3%, 87%);
+    --Dark-grayish-violet: hsl(279, 6%, 55%);
+    --Very-dark-violet: hsl(278, 68%, 11%);
+
+}
+
+body {
+    background-image: url("./images/bg-main-desktop.png");
+    background-repeat: no-repeat;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+
+.card-front {
+    background-image: url("./images/bg-card-front.png");
+    position: absolute;
+    width: 447px;
+    height: 245px;
+    top: 190px;
+    left: 165px;
+    color: white;
+    border-radius: 10px;
+    padding: 2.8rem 3.1rem;
+
+}
+
+.card-front-btm {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+h1 {
+    padding: 6rem 0 3rem;
+    font-size: 2.65rem;
+    font-weight: 100;
+    letter-spacing: 4.5px;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 100;
+    letter-spacing: 2px;
+}
+
+.card-back {
+
+    background-image: url('./images/bg-card-back.png');
+    position: absolute;
+    width: 447px;
+    top: 470px;
+    left: 260px;
+    height: 246px;
+}
+
+.container,
+.complete {
+    position: absolute;
+    top: 247px;
+    right: 136px;
+    display: flex;
+    flex-direction: column;
+    width: 380px;
+
+}
+
+.labels {
+    padding: 2.8rem 0 0.8rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.inputs {
+    padding: 1rem 0 1.2rem 1.5rem;
+    border-radius: 5px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    font-family: 'Space Grotesk', sans-serif;
+    border: 2px solid var(--Dark-grayish-violet);
+}
+
+.details {
+    margin-top: -0.6rem;
+    display: flex;
+
+}
+
+.date-details {
+    display: flex;
+
+}
+
+.date-margin {
+    width: 80px;
+    margin-right: 1rem;
+}
+
+.label-margin {
+
+    margin-right: 5rem;
+}
+
+#cvc {
+    width: 100%;
+    margin: 0 0 0 0.8rem;
+}
+
+.new-cvc {
+    color: white;
+    position: absolute;
+
+    left: 350px;
+    bottom: 120px;
+    z-index: 5;
+}
+
+.btn {
+    padding: 1.2rem;
+    margin-top: 3.8rem;
+    font-size: 1.8rem;
+    background-color: var(--Very-dark-violet);
+    color: white;
+    border-radius: 6px;
+    font-family: 'Space Grotesk', sans-serif;
+    cursor: pointer;
+}
+
+.none {
+    display: none;
+}
+
+
+.show {
+    display: flex;
+    text-align: center;
+    top: 305px;
+}
+
+.complete-icon {
+    display: block;
+    margin: auto;
+    width: 21%;
+}
+
+.thanks {
+    padding: 4rem 0 2rem;
+}
+
+.thanks-para {
+    color: var(--Dark-grayish-violet);
+    font-size: 1.8rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    padding-bottom: 0.5rem;
+}
+
+.change {
+    border-color: var(--Red-input-errors);
+}
+
+.error-msg {
+    color: var(--Red-input-errors);
+    font-size: 1.2rem;
+    padding: 0.5rem 0;
+}
+
+.err-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.img-back {
+    width: 100%;
+}
+
+
+@media screen and (max-width:1250px) {
+    body {
+        background-image: url('./images/bg-main-mobile.png');
+        background-size: 100% 25%;
+        height: 100vh;
+    }
+
+    .container,
+    .complete {
+
+        position: static;
+        width: 315px;
+        margin: -3rem auto 0;
+    }
+
+    .top {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card-front {
+        position: relative;
+        top: -65px;
+        left: -42px;
+        z-index: 5;
+        width: 280px;
+        height: 170px;
+    }
+
+    .card-back {
+        background-size: 100%;
+        position: static;
+        margin-top: 3rem;
+        width: 280px;
+        height: 154px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .new-cvc {
+        position: static;
+        margin-right: 35px;
+    }
+
+    h1 {
+        padding: 2rem 0;
+        font-size: 1.4rem;
+        letter-spacing: 2.5px;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+        letter-spacing: 0.8px;
+    }
+
+}
+
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
